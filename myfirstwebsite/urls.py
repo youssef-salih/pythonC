@@ -20,7 +20,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index_project ,name="index_project"),
-    #pages APP
-    path('pages/', include('pages.urls'), name="index_pages"),
+    # pages APP
+    path('', include('pages.urls'), name="index_pages"),
+    # quotes App
+    path('quote/', include('quotes.urls')),
 ]
